@@ -44,10 +44,8 @@ function App() {
     setEditAvatarPopupOpen(false);
     setEditProfilePopupOpen(false);
     setAddPlacePopupOpen(false);
-    setSelectedCard({
-      isImageOpen: false,
-      link: '',
-      name: ''
+    setSelectedCard((setSelectedCard) => {
+      return {...setSelectedCard, isImageOpen: false}
     });
   }
 
