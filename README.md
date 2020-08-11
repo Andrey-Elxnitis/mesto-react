@@ -2,6 +2,8 @@
 
 ## проект Mesto-react
 
+Ссылка на сайт [Mesto-react](https://andrey-elxnitis.github.io/mesto-react/index.html).
+
 Проект выполнен в рамках обучения в Яндекс Практикум
 
 Что бы запустить проект, используйте команду
