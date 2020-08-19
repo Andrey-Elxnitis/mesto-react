@@ -47,37 +47,47 @@ function EditProfilePopup(props) {
 
     return (
         <PopupWithForm
-        name='profile'
-        title='Редактировать профиль'
-        buttonText='Сохранить'
-        isOpen={isOpen}
-        onClose={onClose}
-        onSubmit={handleSubmit}
-        isLoading={isLoading}
+          name="profile"
+          title="Редактировать профиль"
+          buttonText="Сохранить"
+          isOpen={isOpen}
+          onClose={onClose}
+          onSubmit={handleSubmit}
+          isLoading={isLoading}
         >
-        <fieldset className="popup__inputs">
+        <fieldset
+          className="popup__inputs"
+        >
         <input
-        defaultValue={name}
-        className="popup__input popup__input_name"
-        id="name-input" type="text"
-        required minLength={2} maxLength={40} pattern="[A-Za-zА-ЯЁа-яё -]{1,}" 
-        placeholder="Ваше имя"
-        onChange={handleNameUpdate}
+          defaultValue={name}
+          className="popup__input popup__input_name"
+          id="name-input"
+          type="text"
+          required
+          minLength={2}
+          maxLength={40}
+          pattern="[A-Za-zА-ЯЁа-яё -]{1,}" 
+          placeholder="Ваше имя"
+          onChange={handleNameUpdate}
         />
         <span
-        className="popup__error-message"
-        id="name-input-error">
+          className="popup__error-message"
+          id="name-input-error">
         </span>
         <input
-        defaultValue={description}
-        className="popup__input popup__input_text"
-        id="text-input" type="text"
-        required minLength={2} maxLength={40} placeholder="О себе"
-        onChange={handleDescription}
+          defaultValue={description}
+          className="popup__input popup__input_text"
+          id="text-input"
+          type="text"
+          required
+          minLength={2}
+          maxLength={40}
+          placeholder="О себе"
+          onChange={handleDescription}
         />
         <span
-        className="popup__error-message"
-        id="text-input-error">
+          className="popup__error-message"
+          id="text-input-error">
         </span>
         </fieldset>
         </PopupWithForm>

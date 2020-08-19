@@ -27,28 +27,35 @@ function EditAvatarPopup(props) {
     }
 
     return (
-        <PopupWithForm
-        name='avatar'
-        title='Обновить аватар'
-        buttonText='Сохранить'
+      <PopupWithForm
+        name="avatar"
+        title="Обновить аватар"
+        buttonText="Сохранить"
         isOpen={isOpen}
         onClose={onClose}
         onSubmit={handleSubmit}
         isLoading={isLoading}
       >
-        <fieldset className="popup__inputs">
-          <input
-          name="avatar"
-          className="popup__input popup__input_avatar"
-          id="avatar-link" type="url" placeholder="Загрузите изображение"
-          defaultValue=""
-          required
-          ref={inputAvatar}
-          />
-          <span className="popup__error-message" id="avatar-link-error"></span>
-          </fieldset>
+      <fieldset
+        className="popup__inputs"
+      >
+      <input
+        name="avatar"
+        className="popup__input popup__input_avatar"
+        id="avatar-link"
+        type="url"
+        placeholder="Загрузите изображение"
+        defaultValue=""
+        required
+        ref={inputAvatar}
+      />
+      <span
+        className="popup__error-message"
+        id="avatar-link-error">
+      </span>
+      </fieldset>
       </PopupWithForm>
     )
 }
 
-export default EditAvatarPopup
+export default EditAvatarPopup;

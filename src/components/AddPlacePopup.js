@@ -31,28 +31,45 @@ function AddPlacePopup(props) {
 
     return(
       <PopupWithForm
-      name='card'
-      title='Новое место'
-      buttonText='Сохранить'
-      isOpen={isOpen}
-      onClose={onClose}
-      onSubmit={handleSubmit}
-      isLoading={isLoading}
+        name="card"
+        title="Новое место"
+        buttonText="Сохранить"
+        isOpen={isOpen}
+        onClose={onClose}
+        onSubmit={handleSubmit}
+        isLoading={isLoading}
       >
       <fieldset className="popup__inputs">
           <input
-          name="name" className="popup__input popup__input_title"
-          id="title-input" type="text" placeholder="Название"
-          defaultValue="" required minLength={1} maxLength={30}
-          ref={inputName}
+            name="name"
+            className="popup__input popup__input_title"
+            id="title-input"
+            type="text"
+            placeholder="Название"
+            defaultValue=""
+            required
+            minLength={1}
+            maxLength={30}
+            ref={inputName}
           />
-          <span className="popup__error-message" id="title-input-error"></span>
-          <input name="link" className="popup__input popup__input_link"
-          id="link-input" type="url" placeholder="Ссылка на картинку"
-          defaultValue="" required
-          ref={inputLink}
+          <span
+            className="popup__error-message"
+            id="title-input-error">
+          </span>
+          <input
+            name="link"
+            className="popup__input popup__input_link"
+            id="link-input"
+            type="url"
+            placeholder="Ссылка на картинку"
+            defaultValue=""
+            required
+            ref={inputLink}
           />
-          <span className="popup__error-message" id="link-input-error"></span>
+          <span
+            className="popup__error-message"
+            id="link-input-error">
+          </span>
       </fieldset>
       </PopupWithForm>
     )
