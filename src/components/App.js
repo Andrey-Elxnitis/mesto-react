@@ -29,6 +29,32 @@ function App() {
   //стейт-переменная для отображения "сохранение..."
   const [isLoading, setIsLoading] = useState(false);
 
+  // Закрытие попапов при клике на Esc и на overlay
+  React.useEffect(() => {
+
+    // закрытие попапа при клике на Esc
+    function handleEscClose(event) {
+      if (event.key === "Escape") {
+        closeAllPopups();
+      }
+    }
+
+    // закрытие попапа при клике на overlay
+    function closeOverlay(event) {
+      if (event.target.classList.contains('popup_active')) {
+        closeAllPopups();
+      }
+    }
+
+    document.addEventListener('click', closeOverlay);
+    document.addEventListener('keydown', handleEscClose);
+
+    return () => {
+      document.removeEventListener('keydown', handleEscClose);
+      document.removeEventListener('click', closeOverlay);
+    }
+  });
+
   //запрашиваем данные пользователя с сервера
   React.useEffect(() => {
     api.getUserInfo()

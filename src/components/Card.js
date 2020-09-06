@@ -1,6 +1,5 @@
 import React from 'react';
 import { CurrentUserContext } from '../contexts/CurrentUserContex.js';
-import avatar from '../images/avatar.png';
 
 function Card(props) {
 
